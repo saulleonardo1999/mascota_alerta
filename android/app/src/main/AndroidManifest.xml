@@ -10,7 +10,8 @@
     <application
         android:name="io.flutter.app.FlutterApplication"
         android:label="MascotAlerta"
-        android:icon="@mipmap/launcher_icon">
+        android:icon="@mipmap/launcher_icon"
+        android:allowBackup="false">
         <meta-data android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBu7Ek3lcQFxgW76EHGOF2pnRe44SmNinA"/>
         <activity
