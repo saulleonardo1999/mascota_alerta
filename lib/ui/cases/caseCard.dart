@@ -14,25 +14,19 @@ class CaseCard extends StatefulWidget {
 
 class _CaseCardState extends State<CaseCard> {
   String location;
-  bool loading;
   Uint8List photo;
   @override
   void initState() {
-    loading = true;
+    location = " ";
     try{
       photo = base64Decode(widget.myCase.photo);
-    }catch(e){
-
-    }
+    }catch(e){}
     _getLocation();
     super.initState();
   }
   @override
   Widget build(BuildContext context) {
-    return loading
-        ? Container()
-        :
-    Card(
+    return Card(
       margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       color: Colors.white,
       elevation: 6,
@@ -218,7 +212,6 @@ class _CaseCardState extends State<CaseCard> {
     }
     setState(() {
       location = "$thoroughfare$featureName$subLocality";
-      loading = false;
     });
   }
 

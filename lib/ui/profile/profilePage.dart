@@ -89,8 +89,19 @@ class _ProfilePageState extends State<ProfilePage> {
         backgroundColor: Colors.green,
         actions: <Widget>[
           enableInput
-              ? Container()
-              : IconButton(
+              ?
+          IconButton(
+            icon: Icon(
+              Icons.edit,
+              color: Colors.black,
+            ),
+            onPressed: () {
+              enableInput = false;
+              setState(() {});
+            },
+          )
+              :
+          IconButton(
             icon: Icon(
               Icons.edit,
               color: Colors.white,
@@ -128,7 +139,9 @@ class _ProfilePageState extends State<ProfilePage> {
                             Center(
                               child: InkWell(
                                 onTap: () {
-                                  _optionsPicture();
+                                  if(enableInput){
+                                    _optionsPicture();
+                                  }
                                 },
                                 child: Container(
                                   width: MediaQuery.of(context).size.width*0.37,

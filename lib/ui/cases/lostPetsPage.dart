@@ -49,11 +49,8 @@ class _LostPetsPageState extends State<LostPetsPage> {
             itemCount: myCases.length,
             itemBuilder: (context, index){
               return myCases[index].caseType == 2 ?
-              FadeInLeft(
-                  delay: Duration(milliseconds: 300*index),
-                  child: CaseCard(
-                    myCase: myCases[index],
-                  )
+              CaseCard(
+                myCase: myCases[index],
               ) : Container();
             }
         ): NoContentMessage(message: "No hay registros de perdidos",)

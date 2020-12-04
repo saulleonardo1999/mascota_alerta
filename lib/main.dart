@@ -8,7 +8,7 @@ String token = "";
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final prefs = await SharedPreferences.getInstance();
-  token = prefs.getString('access_token');
+  token = prefs.getString('user');
   runApp(MyApp());
 }
 
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: WelcomePage(),
+      home:  (token == null || token == '') ?  WelcomePage() : CasesMap(),
     );
   }
 }
