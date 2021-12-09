@@ -63,7 +63,7 @@ class _RegisterPageState extends State<RegisterPage> {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-            "Registro de Caso"
+            "¡Registrarme!"
         ),
       ),
       body: SingleChildScrollView(
@@ -198,7 +198,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 color: Colors.green),
             child: Center(
               child: Text(
-                'Iniciar Sesión',
+                'Registrarme',
                 style: TextStyle(
                     fontSize: MediaQuery.of(context).size.width*0.06,
                     color: Colors.white,

@@ -1,9 +1,6 @@
 import 'dart:convert';
-
 import 'package:http/http.dart' as http;
 import 'package:mascota_alerta/models/caseModel.dart';
-import 'package:mascota_alerta/models/userModel.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class CaseProvider{
   final String _url = "https://mascotas-8060d.firebaseio.com";
@@ -23,7 +20,7 @@ class CaseProvider{
   }
   Future <List<CaseModel>> getCases() async {
     final url = "$_url/cases.json";
-    List<CaseModel> casesList = new List();
+    List<CaseModel> casesList = [];
     try{
       final resp = await http.get(url);
       final Map <String, dynamic> decodedData = json.decode(resp.body);

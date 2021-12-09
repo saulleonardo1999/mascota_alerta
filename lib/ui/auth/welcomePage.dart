@@ -46,7 +46,7 @@ class _WelcomePageState extends State<WelcomePage> {
                         "MascotAlerta",
                         style: new TextStyle(
                             color: Colors.green,
-                            fontSize: MediaQuery.of(context).size.width * .11,
+                            fontSize: MediaQuery.of(context).size.width * .07,
                             fontWeight: FontWeight.bold)
                     ),
                   ],
